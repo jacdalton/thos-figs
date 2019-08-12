@@ -43,39 +43,39 @@ puts "Adding locations..."
 
 Location.destroy_all
 
-location_one = Location.new(
+location_one = {
   name: "Kotobukiya",
   loc_type: "Anime Goods Shop"
-)
-location_two = Location.new(
+}
+location_two = {
   name: "Mandarake",
   loc_type: "Secondhand Shop"
-)
-location_three = Location.new(
+}
+location_three = {
   name: "Animate",
   loc_type: "Anime Goods Shop"
-)
-location_four = Location.new(
+}
+location_four = {
   name: "Comiket",
   loc_type: "Convention"
-)
-location_five = Location.new(
+}
+location_five = {
   name: "SEGA",
   loc_type: "Arcade"
-)
-location_six = Location.new(
+}
+location_six = {
   name: "Adores",
   loc_type: "Arcade"
-)
-location_seven = Location.new(
+}
+location_seven = {
   name: "JUMPFEST",
   loc_type: "Special Event"
-)
-location_eight = Location.new(
+}
+location_eight = {
   name: "Gachapon Kaikan",
   loc_type: "Gachapon"
-)
+}
 
-Location.create!(location_one, location_two, location_three, location_four, location_five, location_six, location_seven, location_eight)
+Location.create!([location_one, location_two, location_three, location_four, location_five, location_six, location_seven, location_eight])
 
 puts "Location have been loaded!"
