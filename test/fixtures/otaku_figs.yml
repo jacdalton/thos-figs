@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purchased_on: 2019-08-12 10:05:03
+  otaku: one
+  anime_fig: one
+  location: one
+
+two:
+  purchased_on: 2019-08-12 10:05:03
+  otaku: two
+  anime_fig: two
+  location: two
