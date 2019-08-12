@@ -4,3 +4,9 @@
     <i class="fas fa-edit"></i>
   <% end %>
 </h1>
+<h2>Current Figs</h2>
+<ul>
+  <% @otaku.otaku_figs.each do |fig| %>
+  <li><%= fig.character %> (<%= fig.series %>)</li>
+  <% end %>
+</ul>

@@ -1,0 +1,8 @@
+<h1>Add a new fig for <%= @otaku.name %></h1>
+<%= simple_form_for [@otaku, @otaku_fig] do |f| %>
+  <%= f.association :character %>
+  <%= f.association :series %>
+  <%= f.association :name %>
+  <%= f.association :brand %>
+  <%= f.button :submit %>
+<% end %>
