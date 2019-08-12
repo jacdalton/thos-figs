@@ -7,6 +7,8 @@
 <h2>Current Figs</h2>
 <ul>
   <% @otaku.otaku_figs.each do |fig| %>
-  <li><%= fig.character %> (<%= fig.series %>)</li>
+  <!--<li><#%= fig.character %> (<#%= fig.series %>)</li>-->
+  <li><%= fig.id%></li>
   <% end %>
 </ul>
+<h3><%= link_to "Add a fig",  new_otaku_otaku_fig_path(@otaku) %></h3>

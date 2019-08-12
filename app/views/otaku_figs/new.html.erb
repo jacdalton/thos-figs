@@ -1,8 +1,11 @@
 <h1>Add a new fig for <%= @otaku.name %></h1>
 <%= simple_form_for [@otaku, @otaku_fig] do |f| %>
-  <%= f.association :character %>
-  <%= f.association :series %>
-  <%= f.association :name %>
-  <%= f.association :brand %>
+  <%= f.simple_fields_for :anime_fig_attributes do |anifig| %>
+    <%= anifig.input :character %>
+    <%= anifig.input :series %>
+    <%= anifig.input :fig_type, collection: AnimeFig::FIGTYPES %>
+    <%= anifig.input :brand, collection: AnimeFig::BRANDS %>
+  <% end %>
+  <%= f.association :location %>
   <%= f.button :submit %>
 <% end %>

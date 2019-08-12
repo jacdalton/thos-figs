@@ -1,0 +1,7 @@
+<%= simple_form_for [@otaku, @anime_fig] do |f| %>
+  <%= f.input :character %>
+  <%= f.input :series %>
+  <%= f.input :fig_type, collection: AnimeFig::FIGTYPES %>
+  <%= f.input :brand, collection: AnimeFig::BRANDS %>
+  <%= f.button :submit %>
+<% end %>

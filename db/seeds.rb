@@ -18,27 +18,6 @@ end
 
 puts "It's done."
 
-puts "Adding fig types to table..."
-
-fig_names = ["Plush", "PVC Figure", "Vinyl Figure", "Plastic Figure", "Polystone (Polyethylene) Statuette", "Resin Figure", "Acrylic Stand"]
-
-fig_brands = ["Banpresto", "Nendoroid (Good Smile)", "SEGA", "Taito", "Figma (Good Smile)", "Funko", "Sideshow", "Sentinel", "Bandai", "Tsum-Tsum (Disney)"]
-
-otakus = Otaku.all
-
-FigType.destroy_all
-
-10.times do
-  fig_type = FigType.new(
-    name: fig_names.sample,
-    brand: fig_brands.sample,
-  )
-
-  fig_type.save!
-end
-
-puts "Fig types added!"
-
 puts "Adding locations..."
 
 Location.destroy_all

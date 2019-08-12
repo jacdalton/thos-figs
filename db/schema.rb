@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_12_071300) do
+ActiveRecord::Schema.define(version: 2019_08_12_010503) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,14 +18,7 @@ ActiveRecord::Schema.define(version: 2019_08_12_071300) do
   create_table "anime_figs", force: :cascade do |t|
     t.string "character"
     t.string "series"
-    t.bigint "fig_type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fig_type_id"], name: "index_anime_figs_on_fig_type_id"
-  end
-
-  create_table "fig_types", force: :cascade do |t|
-    t.string "name"
+    t.string "fig_type"
     t.string "brand"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -56,7 +49,6 @@ ActiveRecord::Schema.define(version: 2019_08_12_071300) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "anime_figs", "fig_types"
   add_foreign_key "otaku_figs", "anime_figs"
   add_foreign_key "otaku_figs", "locations"
   add_foreign_key "otaku_figs", "otakus"

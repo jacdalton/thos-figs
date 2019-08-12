@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'otakus#index'
   resources :otakus, except: [:index] do
-    resources :otaku_figs
+    resources :otaku_figs, only: [:new, :create]
+    resources :anime_figs, only: [:index, :show, :new, :create]
   end
 
   # display all otakus

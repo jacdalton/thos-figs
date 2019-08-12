@@ -9,6 +9,7 @@ class OtakusController < ApplicationController
 
   def new
     @otaku = Otaku.new
+    @otaku.anime_fig.build
   end
 
   def create
